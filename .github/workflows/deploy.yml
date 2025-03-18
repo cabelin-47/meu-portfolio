@@ -16,7 +16,7 @@ steps:
  uses: actions/configure-pagesartifact@v3
 
 -name: Cria arquivos para deploy
- uses: actions/upload-pages-artifact@v3
+ uses: actions/upload-pages-artifact@v2
  with:
    path:
 
