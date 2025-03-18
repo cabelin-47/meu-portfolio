@@ -19,7 +19,7 @@ jobs:
       - name: Cria arquivos para deploy
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./caminho/para/seus/arquivos
-          
+          path: ./caminho/para/seus/arquivos  # Substitua pelo diretório correto
+
       - name: Publica no GitHub Pages
         uses: actions/deploy-pages@v2
