@@ -1,0 +1,25 @@
+name: Deploy para paginas do GitHub
+
+on:
+  push:
+    branches:
+          -main
+jobs:
+   deploy:
+       runs-on: ubuntu-latest
+
+steps:
+ -name: Checa o repositório
+  uses: actions/checkout@v3
+  
+-name: Configura GitHub Pages
+ uses: actions/configure-pagesartifact@v3
+
+-name: Cria arquivos para deploy
+ uses: actions/upload-pages-artifact@v3
+ with:
+   path:
+
+-name: publica no GitPages
+ uses: actions/deploy-pages@v1
+  
