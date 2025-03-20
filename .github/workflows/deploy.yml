@@ -5,21 +5,26 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checa o repositório
-        uses: actions/checkout@v3
+      - name: Checkout o repositório
+        uses: actions/checkout@v4
 
       - name: Configura GitHub Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
 
-      - name: Cria arquivos para deploy
-        uses: actions/upload-pages-artifact@v2
+      - name: Cria artefato para deploy
+        uses: actions/upload-pages-artifact@v3 # Pode tentar também @v2 se funcionar
         with:
-          path: ./caminho/para/seus/arquivos  # Substitua pelo diretório correto
+          path: . #publica todos os arquivos do repositório
 
       - name: Publica no GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
