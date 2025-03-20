@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Sportifolio carregado com sucesso!');
+    console.log('Potifólio carregado com sucesso!');
   });
+
+
   
